@@ -49,8 +49,8 @@ Set the secrets in the Supabase dashboard (or `supabase secrets set ...`). Do no
 
 ### D. Configure the frontend
 Edit `app-config.js` and replace:
-- `SUPABASE_URL`
-- `SUPABASE_ANON_KEY`
+- `https://hleqgkfndjxckdoznjdp.supabase.co/rest/v1/`
+- `sb_publishable_-0_hpxY9SfCKjFlJjv1woA_MhEhy9IL`
 
 These are public client values. The anon/publishable key is safe only because RLS and Edge Function authorization are configured correctly.
 
