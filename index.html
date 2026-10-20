@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CircuitTech Mine | Safety Dashboard</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand-mark">CT</div><div><strong>CircuitTech Mine</strong><small>Mine safety monitoring</small></div><nav><a href="index.html" aria-current="page">Dashboard</a><a href="admin.html">Admin</a></nav></header>
+<main class="wrap">
+  <section class="hero"><div><p class="eyebrow">LIVE IOT MONITORING</p><h1>Mine safety dashboard</h1><p>View environmental sensor readings from each configured site.</p></div><div class="live-pill"><span></span> ThingSpeak feed</div></section>
+  <section class="panel">
+    <div class="section-head"><div><p class="eyebrow">CLIENT SITE</p><h2>Select a client</h2></div><span class="muted" id="lastUpdated">Waiting for data…</span></div>
+    <div class="client-buttons" role="group" aria-label="Select client">
+      <button class="client-button selected" data-client="client1"><span>01</span><b>Client 1</b></button>
+      <button class="client-button" data-client="client2"><span>02</span><b>Client 2</b></button>
+      <button class="client-button" data-client="client3"><span>03</span><b>Client 3</b></button>
+    </div>
+    <p class="warning" id="notice">Client readings are public to visitors of this dashboard. Do not use this mode for confidential client data.</p>
+  </section>
+  <section class="section-head sensor-heading"><div><p class="eyebrow">SENSOR TELEMETRY</p><h2 id="clientTitle">Client 1 readings</h2></div><button class="button secondary" id="refresh">Refresh now</button></section>
+  <div id="error" class="error" hidden></div><section id="sensors" class="sensor-grid"><div class="empty">Loading sensor readings…</div></section>
+  <footer>For demonstration and monitoring support only. Do not treat this dashboard as a certified mine-safety alarm system.</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app-config.js"></script><script src="app.js"></script>
+</body></html>

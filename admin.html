@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CircuitTech Mine | Admin</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="topbar"><div class="brand-mark">CT</div><div><strong>CircuitTech Mine</strong><small>Administration</small></div><nav><a href="index.html">Dashboard</a><a href="admin.html" aria-current="page">Admin</a></nav></header>
+<main class="wrap narrow">
+  <section class="hero"><div><p class="eyebrow">PROTECTED SETTINGS</p><h1>Administrator console</h1><p>Sign in to edit settings shared across the website.</p></div></section>
+  <section id="loginPanel" class="panel">
+    <h2>Administrator sign-in</h2><p class="muted">Use the administrator account created in Supabase Authentication.</p>
+    <form id="loginForm"><label>Email<input type="email" id="email" autocomplete="username" required></label><label>Password<input type="password" id="password" autocomplete="current-password" required minlength="8"></label><button class="button primary" type="submit">Sign in securely</button></form>
+  </section>
+  <section id="settingsPanel" class="panel" hidden>
+    <div class="section-head"><div><p class="eyebrow">SHARED CONFIGURATION</p><h2>Website settings</h2></div><button class="button secondary" id="signOut">Sign out</button></div>
+    <p class="muted">Changes are saved to Supabase and shared by every visitor. ThingSpeak keys remain in backend secrets, not here.</p>
+    <div id="settingsEditor"></div>
+    <div class="actions"><button class="button primary" id="saveSettings">Save shared settings</button><button class="button secondary" id="reloadSettings">Reload from server</button></div>
+  </section>
+  <div id="status" class="status" role="status"></div>
+  <footer>Admin access is checked by the backend on every settings request. A hidden page alone is not security.</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app-config.js"></script><script src="app.js"></script>
+</body></html>
